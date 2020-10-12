@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56F9A112-FD96-4809-98F4-0D7C5DE0711B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Learun.Application.TwoDevelopment</RootNamespace>
+    <AssemblyName>Learun.Application.TwoDevelopment</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Application.Base">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.Application.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Application.Organization">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.Application.Organization.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Cache.Base">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.Cache.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Cache.Factory">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.Cache.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Cache.Mongo">
+      <HintPath>..\..\..\Learun.Application.Web\bin\Learun.Cache.Mongo.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Cache.Redis">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.Cache.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.DataBase">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.DataBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.DataBase.Repository">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.DataBase.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Util">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Learun.Util.Operat">
+      <HintPath>..\..\..\Learun.Application.Web\Libs\Learun.Util.Operat.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Learun.Cache\Learun.Cache.Mongo\Learun.Cache.Mongo\bin\Debug\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\..\Learun.Application.Web\bin\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LR_Desktop\DTChart\DTChartBLL1.cs" />
+    <Compile Include="LR_Desktop\DTChart\DTChartIBLL1.cs" />
+    <Compile Include="LR_Desktop\DTChart\DTChartService1.cs" />
+    <Compile Include="LR_Desktop\DTChart\LR_DT_ChartEntity1.cs" />
+    <Compile Include="LR_LGManager\EmployeeAccess\EmployeeAccessBLL.cs" />
+    <Compile Include="LR_LGManager\EmployeeAccess\EmployeeAccessIBLL.cs" />
+    <Compile Include="LR_LGManager\EmployeeAccess\EmployeeAccessService.cs" />
+    <Compile Include="LR_LGManager\EmployeeAccess\tb_employee_accessEntity.cs" />
+    <Compile Include="LR_LGManager\production_plan\AutoRunEntity.cs" />
+    <Compile Include="LR_RunParam\LR_RunParamBLL.cs" />
+    <Compile Include="LR_RunParam\LR_RunParamIBLL.cs" />
+    <Compile Include="LR_RunParam\LR_RunParamService.cs" />
+    <Compile Include="LR_RunParam\tb_machine_infoEntity.cs" />
+    <Compile Include="LR_RunParam\tb_run_infoEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemDemo\Demoleave\DemoleaveBLL.cs" />
+    <Compile Include="SystemDemo\Demoleave\DemoleaveEntity.cs" />
+    <Compile Include="SystemDemo\Demoleave\DemoleaveIBLL.cs" />
+    <Compile Include="SystemDemo\Demoleave\DemoleaveService.cs" />
+    <Compile Include="LR_Desktop\DTTarget\LR_DT_TargetEntity.cs" />
+    <Compile Include="LR_Desktop\DTTarget\DTTargetService.cs" />
+    <Compile Include="LR_Desktop\DTTarget\DTTargetBLL.cs" />
+    <Compile Include="LR_Desktop\DTTarget\DTTargetIBLL.cs" />
+    <Compile Include="LR_Desktop\DTList\LR_DT_ListEntity.cs" />
+    <Compile Include="LR_Desktop\DTList\DTListService.cs" />
+    <Compile Include="LR_Desktop\DTList\DTListBLL.cs" />
+    <Compile Include="LR_Desktop\DTList\DTListIBLL.cs" />
+    <Compile Include="LR_Desktop\DTChart\LR_DT_ChartEntity.cs" />
+    <Compile Include="LR_Desktop\DTChart\DTChartService.cs" />
+    <Compile Include="LR_Desktop\DTChart\DTChartBLL.cs" />
+    <Compile Include="LR_Desktop\DTChart\DTChartIBLL.cs" />
+    <Compile Include="LR_LGManager\LGMap\LR_Lg_MapEntity.cs" />
+    <Compile Include="LR_LGManager\LGMap\LGMapService.cs" />
+    <Compile Include="LR_LGManager\LGMap\LGMapBLL.cs" />
+    <Compile Include="LR_LGManager\LGMap\LGMapIBLL.cs" />
+    <Compile Include="LR_LGManager\LGType\LR_Lg_TypeEntity.cs" />
+    <Compile Include="LR_LGManager\LGType\LGTypeService.cs" />
+    <Compile Include="LR_LGManager\LGType\LGTypeBLL.cs" />
+    <Compile Include="LR_LGManager\LGType\LGTypeIBLL.cs" />
+    <Compile Include="LR_ReportTest\TestCRMReport\TestCRMReportService.cs" />
+    <Compile Include="LR_ReportTest\TestCRMReport\TestCRMReportBLL.cs" />
+    <Compile Include="LR_ReportTest\TestCRMReport\TestCRMReportIBLL.cs" />
+    <Compile Include="LR_LGManager\ProductEcode\tb_product_hisEntity.cs" />
+    <Compile Include="LR_LGManager\ProductEcode\ProductEcodeService.cs" />
+    <Compile Include="LR_LGManager\ProductEcode\ProductEcodeBLL.cs" />
+    <Compile Include="LR_LGManager\ProductEcode\ProductEcodeIBLL.cs" />
+    <Compile Include="LR_LGManager\AlarmMsg\tb_machine_infoEntity.cs" />
+    <Compile Include="LR_LGManager\AlarmMsg\tb_alarm_historyEntity.cs" />
+    <Compile Include="LR_LGManager\AlarmMsg\AlarmMsgService.cs" />
+    <Compile Include="LR_LGManager\AlarmMsg\AlarmMsgBLL.cs" />
+    <Compile Include="LR_LGManager\AlarmMsg\AlarmMsgIBLL.cs" />
+    <Compile Include="LR_LGManager\macgroup\tb_macgroup_infoEntity.cs" />
+    <Compile Include="LR_LGManager\macgroup\macgroupService.cs" />
+    <Compile Include="LR_LGManager\macgroup\macgroupBLL.cs" />
+    <Compile Include="LR_LGManager\macgroup\macgroupIBLL.cs" />
+    <Compile Include="LR_LGManager\Ecode\EcodeService.cs" />
+    <Compile Include="LR_LGManager\Ecode\EcodeBLL.cs" />
+    <Compile Include="LR_LGManager\Ecode\EcodeIBLL.cs" />
+    <Compile Include="LR_Desktop\RunParam\tb_machine_infoEntity.cs" />
+    <Compile Include="LR_Desktop\RunParam\tb_run_infoEntity.cs" />
+    <Compile Include="LR_Desktop\RunParam\RunParamService.cs" />
+    <Compile Include="LR_Desktop\RunParam\RunParamBLL.cs" />
+    <Compile Include="LR_Desktop\RunParam\RunParamIBLL.cs" />
+    <Compile Include="LR_LGManager\quantity_info\tb_quantity_infoEntity.cs" />
+    <Compile Include="LR_LGManager\quantity_info\quantity_infoService.cs" />
+    <Compile Include="LR_LGManager\quantity_info\quantity_infoBLL.cs" />
+    <Compile Include="LR_LGManager\quantity_info\quantity_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\product_info\tb_product_infoEntity.cs" />
+    <Compile Include="LR_LGManager\product_info\product_infoService.cs" />
+    <Compile Include="LR_LGManager\product_info\product_infoBLL.cs" />
+    <Compile Include="LR_LGManager\product_info\product_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\Plan_HourData\tb_plan_detail_dataEntity.cs" />
+    <Compile Include="LR_LGManager\Plan_HourData\Plan_HourDataService.cs" />
+    <Compile Include="LR_LGManager\Plan_HourData\Plan_HourDataBLL.cs" />
+    <Compile Include="LR_LGManager\Plan_HourData\Plan_HourDataIBLL.cs" />
+    <Compile Include="LR_LGManager\StopReason\tb_stop_reason_hisEntity.cs" />
+    <Compile Include="LR_LGManager\StopReason\StopReasonService.cs" />
+    <Compile Include="LR_LGManager\StopReason\StopReasonBLL.cs" />
+    <Compile Include="LR_LGManager\StopReason\StopReasonIBLL.cs" />
+    <Compile Include="LR_LGManager\maintain\tb_plan_cycle_dataEntity.cs" />
+    <Compile Include="LR_LGManager\maintain\maintainService.cs" />
+    <Compile Include="LR_LGManager\maintain\maintainBLL.cs" />
+    <Compile Include="LR_LGManager\maintain\maintainIBLL.cs" />
+    <Compile Include="LR_LGManager\workOrder\tb_plan_cycle_exe_dataEntity.cs" />
+    <Compile Include="LR_LGManager\workOrder\workOrderService.cs" />
+    <Compile Include="LR_LGManager\workOrder\workOrderBLL.cs" />
+    <Compile Include="LR_LGManager\workOrder\workOrderIBLL.cs" />
+    <Compile Include="LR_LGManager\Plan_Wshift\tb_plan_wshift_dataEntity.cs" />
+    <Compile Include="LR_LGManager\Plan_Wshift\Plan_WshiftService.cs" />
+    <Compile Include="LR_LGManager\Plan_Wshift\Plan_WshiftBLL.cs" />
+    <Compile Include="LR_LGManager\Plan_Wshift\Plan_WshiftIBLL.cs" />
+    <Compile Include="LR_LGManager\Plan_Day\tb_plan_day_dataEntity.cs" />
+    <Compile Include="LR_LGManager\Plan_Day\Plan_DayService.cs" />
+    <Compile Include="LR_LGManager\Plan_Day\Plan_DayBLL.cs" />
+    <Compile Include="LR_LGManager\Plan_Day\Plan_DayIBLL.cs" />
+    <Compile Include="LR_LGManager\tool_history\tb_mac_tool_historyEntity.cs" />
+    <Compile Include="LR_LGManager\tool_history\tool_historyService.cs" />
+    <Compile Include="LR_LGManager\tool_history\tool_historyBLL.cs" />
+    <Compile Include="LR_LGManager\tool_history\tool_historyIBLL.cs" />
+    <Compile Include="LR_LGManager\machineinfo_export\machineinfo_exportService.cs" />
+    <Compile Include="LR_LGManager\machineinfo_export\machineinfo_exportBLL.cs" />
+    <Compile Include="LR_LGManager\machineinfo_export\machineinfo_exportIBLL.cs" />
+    <Compile Include="LR_LGManager\ToolType\tb_tooltype_infoEntity.cs" />
+    <Compile Include="LR_LGManager\ToolType\ToolTypeService.cs" />
+    <Compile Include="LR_LGManager\ToolType\ToolTypeBLL.cs" />
+    <Compile Include="LR_LGManager\ToolType\ToolTypeIBLL.cs" />
+    <Compile Include="LR_LGManager\ToolModel\tb_toolmodel_infoEntity.cs" />
+    <Compile Include="LR_LGManager\ToolModel\ToolModelService.cs" />
+    <Compile Include="LR_LGManager\ToolModel\ToolModelBLL.cs" />
+    <Compile Include="LR_LGManager\ToolModel\ToolModelIBLL.cs" />
+    <Compile Include="LR_LGManager\toolinstall_record\tb_toolinstall_recordEntity.cs" />
+    <Compile Include="LR_LGManager\toolinstall_record\toolinstall_recordService.cs" />
+    <Compile Include="LR_LGManager\toolinstall_record\toolinstall_recordBLL.cs" />
+    <Compile Include="LR_LGManager\toolinstall_record\toolinstall_recordIBLL.cs" />
+    <Compile Include="LR_LGManager\tool_group\tb_toolgroup_infoEntity.cs" />
+    <Compile Include="LR_LGManager\tool_group\tool_groupService.cs" />
+    <Compile Include="LR_LGManager\tool_group\tool_groupBLL.cs" />
+    <Compile Include="LR_LGManager\tool_group\tool_groupIBLL.cs" />
+    <Compile Include="LR_LGManager\tool_pos\tb_toolpos_infoEntity.cs" />
+    <Compile Include="LR_LGManager\tool_pos\tool_posService.cs" />
+    <Compile Include="LR_LGManager\tool_pos\tool_posBLL.cs" />
+    <Compile Include="LR_LGManager\tool_pos\tool_posIBLL.cs" />
+    <Compile Include="LR_LGManager\stock_info\tb_stock_infoEntity.cs" />
+    <Compile Include="LR_LGManager\stock_info\stock_infoService.cs" />
+    <Compile Include="LR_LGManager\stock_info\stock_infoBLL.cs" />
+    <Compile Include="LR_LGManager\stock_info\stock_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\stock_bak\tb_stock_info_bakEntity.cs" />
+    <Compile Include="LR_LGManager\stock_bak\stock_bakService.cs" />
+    <Compile Include="LR_LGManager\stock_bak\stock_bakBLL.cs" />
+    <Compile Include="LR_LGManager\stock_bak\stock_bakIBLL.cs" />
+    <Compile Include="LR_LGManager\store_info\tb_store_infoEntity.cs" />
+    <Compile Include="LR_LGManager\store_info\store_infoService.cs" />
+    <Compile Include="LR_LGManager\store_info\store_infoBLL.cs" />
+    <Compile Include="LR_LGManager\store_info\store_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\apply_info\tb_apply_infoEntity.cs" />
+    <Compile Include="LR_LGManager\apply_info\apply_infoService.cs" />
+    <Compile Include="LR_LGManager\apply_info\apply_infoBLL.cs" />
+    <Compile Include="LR_LGManager\apply_info\apply_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\order_info\tb_order_infoEntity.cs" />
+    <Compile Include="LR_LGManager\order_info\order_infoService.cs" />
+    <Compile Include="LR_LGManager\order_info\order_infoBLL.cs" />
+    <Compile Include="LR_LGManager\order_info\order_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\fast_tool_info\tb_tool_infoEntity.cs" />
+    <Compile Include="LR_LGManager\fast_tool_info\fast_tool_infoService.cs" />
+    <Compile Include="LR_LGManager\fast_tool_info\fast_tool_infoBLL.cs" />
+    <Compile Include="LR_LGManager\fast_tool_info\fast_tool_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\toolblade_info\tb_toolblade_infoEntity.cs" />
+    <Compile Include="LR_LGManager\toolblade_info\toolblade_infoService.cs" />
+    <Compile Include="LR_LGManager\toolblade_info\toolblade_infoBLL.cs" />
+    <Compile Include="LR_LGManager\toolblade_info\toolblade_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\toolhilt_info\tb_toolhilt_infoEntity.cs" />
+    <Compile Include="LR_LGManager\toolhilt_info\toolhilt_infoService.cs" />
+    <Compile Include="LR_LGManager\toolhilt_info\toolhilt_infoBLL.cs" />
+    <Compile Include="LR_LGManager\toolhilt_info\toolhilt_infoIBLL.cs" />
+    <Compile Include="LR_LGManager\ToolInspection\tb_toolInspection_infoEntity.cs" />
+    <Compile Include="LR_LGManager\ToolInspection\ToolInspectionService.cs" />
+    <Compile Include="LR_LGManager\ToolInspection\ToolInspectionBLL.cs" />
+    <Compile Include="LR_LGManager\ToolInspection\ToolInspectionIBLL.cs" />
+    <Compile Include="LR_LGManager\production_plan\tb_production_planEntity.cs" />
+    <Compile Include="LR_LGManager\production_plan\production_planService.cs" />
+    <Compile Include="LR_LGManager\production_plan\production_planBLL.cs" />
+    <Compile Include="LR_LGManager\production_plan\production_planIBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。启用“NuGet 程序包还原”可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "ToolInspection";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="lr-form-wrap">
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">生产线</div>
+        <div id="machine_group"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">产品编码</div>
+        <input id="product_id" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">流程编号</div>
+        <div id="wf_id"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">刀柄码</div>
+        <div id="toolhilt_id"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">刀具码</div>
+        <div id="tool_id"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">刀片编号</div>
+        <input id="toolblade_id" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">刀位码</div>
+        <input id="toolpos_id" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">长度</div>
+        <input id="toollength" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">直径</div>
+        <input id="tooldia" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">寿命</div>
+        <input id="toollife" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">操作人员</div>
+        <div id="oprater"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_toolInspection_info" >
+        <div class="lr-form-item-title">剩余寿命</div>
+        <input id="rest_life" type="text" class="form-control"  />
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/ToolInspection/Form.js")

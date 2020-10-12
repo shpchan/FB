@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "fast刀具管理";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="lr-form-wrap">
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">刀具名称<font face="宋体">*</font></div>
+        <div id="tool_name" isvalid="yes" checkexpession="NotNull" ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">刀具码<font face="宋体">*</font></div>
+        <input id="tool_id" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">序号</div>
+        <input id="tool_order" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">刀具规格</div>
+        <input id="tool_gg" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">刀具材料</div>
+        <div id="tool_cl"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">刀具涂层</div>
+        <div id="tool_tc"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">厂家</div>
+        <div id="tool_cj"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">刃磨厂家</div>
+        <div id="tool_mrcj"  ></div>
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_tool_info" >
+        <div class="lr-form-item-title">刃磨次数</div>
+        <div id="tool_mrcs"  ></div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/fast_tool_info/Form.js")

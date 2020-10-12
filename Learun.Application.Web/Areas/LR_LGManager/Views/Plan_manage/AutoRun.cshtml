@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Plan_manage";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="lr-form-wrap">
+    <div class="col-xs-12 lr-form-item" data-table="tb_production_plan">
+        <div class="lr-form-item-title">自动模式<font face="宋体">*</font></div>
+        <input id="checkAuto" type="checkbox"checked="checked">
+    </div>
+    <div id="sort">
+        @*<div class="col-xs-12 lr-form-item" data-table="tb_production_plan">
+            <div class="lr-form-item-title">1<font face="宋体">*</font></div>
+            <div>
+                <select id="state" style="height:28px">
+                    <option value="">==请选择==</option>
+                    <option value="新增">新增</option>
+                    <option value="开始">开始</option>
+                    <option value="暂停">暂停</option>
+                    <option value="完成">完成</option>
+                </select>
+            </div>
+        </div>*@
+    </div>
+   
+</div>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/Plan_manage/AutoRun.js")

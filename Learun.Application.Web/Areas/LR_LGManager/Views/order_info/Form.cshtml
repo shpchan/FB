@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "采购订单";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="lr-form-wrap">
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">合同编号</div>
+        <input id="contract_id" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">供应商</div>
+        <input id="supplier" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">日期</div>
+        <input id="order_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',onpicked: function () { $('#order_time').trigger('change'); } })"   />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">单据编号</div>
+        <input id="order_id" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">变更日期</div>
+        <input id="change_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',onpicked: function () { $('#change_time').trigger('change'); } })"   />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">变更原因</div>
+        <input id="change_reason" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">物料代码<font face="宋体">*</font></div>
+        <input id="materiel_id" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">物料名称</div>
+        <input id="materiel_name" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">规格型号</div>
+        <input id="materiel_gg" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">单位</div>
+        <input id="materiel_unit" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">币别</div>
+        <input id="money_type" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">数量</div>
+        <input id="materiel_num" type="text" class="form-control" isvalid="yes" checkexpession="NumOrNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_order_info" >
+        <div class="lr-form-item-title">交货日期</div>
+        <input id="arrival_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',onpicked: function () { $('#arrival_time').trigger('change'); } })"   />
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/order_info/Form.js")

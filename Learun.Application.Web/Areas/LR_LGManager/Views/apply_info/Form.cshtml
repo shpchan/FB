@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "采购申请单";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="lr-form-wrap">
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">日期</div>
+        <input id="apply_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',onpicked: function () { $('#apply_time').trigger('change'); } })"   />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">单据编号</div>
+        <input id="bill_id" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">业务类型</div>
+        <input id="business_type" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">审核标志</div>
+        <input id="check_flag" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">关闭标志</div>
+        <input id="close_flag" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">使用部门</div>
+        <input id="use_department" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">申请人</div>
+        <input id="applyer" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">物料名称</div>
+        <input id="materiel_name" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">型号规格</div>
+        <input id="materiel_gg" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">单位</div>
+        <input id="materiel_unit" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">数量</div>
+        <input id="materiel_num" type="text" class="form-control" isvalid="yes" checkexpession="NumOrNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">到货日期</div>
+        <input id="arrival_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',onpicked: function () { $('#arrival_time').trigger('change'); } })"   />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">供应商名称</div>
+        <input id="supplier" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">行业务关闭标志</div>
+        <input id="rowclose_flag" type="text" class="form-control"  />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">物料长代码<font face="宋体">*</font></div>
+        <input id="materiel_id" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item"  data-table="tb_apply_info" >
+        <div class="lr-form-item-title">建议采购日期</div>
+        <input id="adviseapply_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',onpicked: function () { $('#adviseapply_time').trigger('change'); } })"   />
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/apply_info/Form.js")

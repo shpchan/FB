@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "二维码追溯";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+<div class="lr-layout ">
+    <div class="lr-layout-center">
+        <div class="lr-layout-wrap lr-layout-wrap-notitle ">
+            <div class="lr-layout-tool">
+                <div class="lr-layout-tool-left">
+                    <div class="lr-layout-tool-item">
+                        <div id="datesearch"></div>
+                    </div>
+                    <div class="lr-layout-tool-item">
+                        追溯码：
+                        <input id="txt_Keyword" type="text" class="form-control" placeholder="请输入要查询二维码" />
+                    </div>
+                    <div class="lr-layout-tool-item" style="float:left;">
+                        <select id="aLine" type="text" class="form-control" placeholder="请输入设备组名称">
+                            <option value="">请选择...</option>
+                            @foreach (SiteJnrs.Models.DeviceLineNum dln in ViewData["ListDeviceLineNum"] as List
+                                <SiteJnrs.Models.DeviceLineNum>
+                            )
+                            {
+                                <option value="@dln.group_id">@dln.group_name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="lr-layout-tool-item" style="float:left;">
+                        <select id="MachineName" type="text" class="form-control" placeholder="请输入设备名称"></select>
+                    </div>
+                    <div class="lr-layout-tool-item">
+                        <a id="btn_Search" class="btn btn-primary btn-sm"><i class="fa fa-search"></i>&nbsp;<span class="lrlt">查询</span></a>
+                    </div>
+                </div>
+                <div class="lr-layout-tool-right">
+                    <div class=" btn-group btn-group-sm">
+                        <a id="lr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                    <div class=" btn-group btn-group-sm" learun-authorize="yes">
+                        <a id="lr_delete" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+                        <a id="lr_print" class="btn btn-default"><i class="fa fa-print"></i>&nbsp;打印</a>
+                        <a id="lr_outport" class="btn btn-default"><i class="fa fa-sign-out"></i>&nbsp;导出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lr-layout-body-left" id="gridtable" style="width:40%;"></div>
+            <div class="lr-layout-body-right" id="gridtable2" style="width:58%;height:80%;background-color:lightgrey;"></div>
+            <div class="lr-layout-body-right" id="pancel" style="width:58%;background-color:white">
+                <b>工件信息</b>
+            </div>
+            <div id="prod_ecode_info_bom" class="lr-layout-body-right" style="width:58%;background-color:white">
+                <table style="font-family:songti;color:#000;">
+                    <tr>
+                        <td align="right" style="width:10%"><b>追溯码：</b></td>
+                        <td align="left" style="width:23%">{{product_ecode}}</td>
+                        <td align="right" style="width:10%"><b>标签：</b></td>
+                        <td align="left" style="width:23%;"><span style="background-color:silver">{{stage_desp}}</span></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>打标时间：</b></td>
+                        <td align="left">{{printed_time}}</td>
+                        <td align="right"><b>上线时间：</b></td>
+                        <td align="left">{{begin_time}}</td>
+                        <td align="right" style="width:10%"><b>下线时间：</b></td>
+                        <td align="left" style="width:23%">{{end_time}}</td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>班次日期：</b></td>
+                        <td align="left">{{wshift_date}}</td>
+                        <td align="right"><b>班次信息：</b></td>
+                        <td align="left">{{wshift_name}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/LR_ReportModule/Views/ReportTemplate/Scripts1/vue.js")
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/ProductEcode/Index.js")

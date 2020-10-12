@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Plan_manage";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+    <div class="lr-form-wrap">
+        <div class="col-xs-12 lr-form-item" style="padding:0;line-height:38px;text-align:center;font-size:20px;font-weight:bold;color:#333;">
+            <span></span>
+        </div>
+        <div class="col-xs-6 lr-form-item" data-table="tb_production_plan">
+            <div class="lr-form-item-title">计划名称<font face="宋体">*</font></div>
+            <input id="plan_name" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+        </div>
+        <div class="col-xs-6 lr-form-item" data-table="tb_production_plan">
+            <div class="lr-form-item-title">产品名称<font face="宋体">*</font></div>
+            <input id="product_name" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+        </div>
+        <div class="col-xs-6 lr-form-item" data-table="tb_production_plan">
+            <div class="lr-form-item-title">计划数量<font face="宋体">*</font></div>
+            <input id="plan_amount" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" />
+        </div>
+        <div id="prod" class="col-xs-6 lr-form-item" data-table="tb_production_plan">
+            <div class="lr-form-item-title">当前产量<font face="宋体">*</font></div>
+            <input id="prod_num" type="text" class="form-control" disabled />
+        </div>
+        <div class="col-xs-6 lr-form-item" data-table="tb_production_plan">
+            <div class="lr-form-item-title">所属设备<font face="宋体">*</font></div>
+            <div id="machine_id" isvalid="yes" checkexpession="NotNull"></div>
+        </div>
+        @*<div id="create" class="col-xs-6 lr-form-item" data-table="tb_production_plan">
+            <div class="lr-form-item-title">创建人员<font face="宋体">*</font></div>
+            <input id="create_user" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+        </div>
+        <div id="operation" class="col-xs-6 lr-form-item" data-table="tb_production_plan">
+            <div class="lr-form-item-title">操作人员<font face="宋体">*</font></div>
+            <input id="operation_user" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+        </div>*@
+        @*<div class="col-xs-6 lr-form-item"  data-table="tb_production_plan" >
+            <div class="lr-form-item-title">计划开始时间<font face="宋体">*</font></div>
+            <input id="start_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm',onpicked: function () { $('#start_time').trigger('change'); } })"  isvalid="yes" checkexpession="NotNull" />
+        </div>
+        <div class="col-xs-6 lr-form-item"  data-table="tb_production_plan" >
+            <div class="lr-form-item-title">计划结束时间<font face="宋体">*</font></div>
+            <input id="end_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm',onpicked: function () { $('#end_time').trigger('change'); } })"  isvalid="yes" checkexpession="NotNull" />
+        </div>*@
+        <div class="col-xs-6 lr-form-item" data-table="tb_production_plan" id="stateSelect">
+            <div class="lr-form-item-title">状态<font face="宋体">*</font></div>
+            <div isvalid="yes">
+                <select id="state" style="width:185px;height:28px">
+                    <option value="新增">新增</option>
+                    <option value="开始">开始</option>
+                    <option value="暂停">暂停</option>
+                    <option value="完成">完成</option>
+                </select>
+            </div>
+        </div>
+    </div>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/Plan_manage/Form.js")

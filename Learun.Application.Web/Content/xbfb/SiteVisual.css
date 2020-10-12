@@ -1,0 +1,226 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+}
+/*td{
+    border: 1px solid black;
+}*/
+#Container {
+    width: 1366px;
+    margin: 0 auto; /*设置整个容器在浏览器中水平居中*/
+    background: #000;
+}
+
+#Header {
+    height: 80px;
+    width: 1366px;
+    /*background:green;*/
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#Content {
+    height: 625px;
+    margin-top: 0px;
+    background: green;
+}
+
+
+.zzt {
+    position: absolute;
+    top: 220px;
+    left: 350px;
+    z-index: 2;
+}
+
+.cl {
+    position: absolute;
+    top: 25px;
+    left: -32px;
+    z-index: 2;
+}
+
+.cl1 {
+    position: absolute;
+    top: -94px;
+    left: -5px;
+    z-index: 2;
+}
+
+.Robot-1 {
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP10-1 {
+    position: absolute;
+    top: 200px;
+    left: 420px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP10-2 {
+    position: absolute;
+    top: 200px;
+    left: 490px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP20-1 {
+    position: absolute;
+    top: 200px;
+    left: 630px;
+    z-index: 2;
+    text-align: center;
+}
+.OP30-1 {
+    position: absolute;
+    top: 200px;
+    left: 750px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP50-1 {
+    position: absolute;
+    top: 200px;
+    left: 865px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP50-2 {
+    position: absolute;
+    top: 200px;
+    left: 980px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP50-3 {
+    position: absolute;
+    top: 200px;
+    left: 1085px;
+    z-index: 2;
+    text-align: center;
+}
+
+
+.OP10-3 {
+    position: absolute;
+    top: 560px;
+    left: 450px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP10-4 {
+    position: absolute;
+    top: 560px;
+    left: 520px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP20-2 {
+    position: absolute;
+    top: 560px;
+    left: 685px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP30-2 {
+    position: absolute;
+    top: 560px;
+    left: 795px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP50-4 {
+    position: absolute;
+    top: 560px;
+    left: 1060px;
+    z-index: 2;
+    text-align: center;
+}
+
+.OP50-5 {
+    position: absolute;
+    top: 560px;
+    left: 1170px;
+    z-index: 2;
+    text-align: center;
+}
+
+.Robot-2 {
+    position: absolute;
+    top: 560px;
+    left: 1270px;
+    z-index: 2;
+    text-align: center;
+}
+
+.run {
+    position: absolute;
+    top: 720px;
+    left: 550px;
+}
+
+.alarm {
+    position: absolute;
+    top: 720px;
+    left: 650px;
+}
+
+.pause {
+    position: absolute;
+    top: 720px;
+    left: 750px;
+}
+
+.ready {
+    position: absolute;
+    top: 720px;
+    left: 850px;
+}
+
+.stop {
+    position: absolute;
+    top: 720px;
+    left: 950px;
+}
+
+.jnrs {
+    position: absolute;
+    top: 710px;
+    left: 1200px;
+}
+
+.logo {
+    position: absolute;
+    top: 35px;
+    left: 102px;
+    z-index: 2;
+}
+
+.dise {
+    position: absolute;
+    top: 45px;
+    left: 102px;
+}
+
+.Footer {
+    position: absolute;
+    top: 770px;
+    left: 620px;
+}

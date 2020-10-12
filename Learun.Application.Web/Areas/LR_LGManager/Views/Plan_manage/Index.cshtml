@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Plan_manage";
+    Layout = "~/Views/Shared/_ReportTemplate.cshtml";
+}
+<div class="lr-layout ui-report">
+    <div class="lr-layout-center">
+        <div class="lr-layout-wrap lr-layout-wrap-notitle ">
+            <div class="lr-layout-tool" @*style="height:135px;"*@>
+                <div class="lr-layout-tool-left">
+                    <div class="lr-layout-tool-item">
+                        <div id="datesearch"></div>
+                    </div>
+                    <div class="lr-layout-tool-item" id="multiple_condition_query" style="margin-top: 0px">
+                        <div class="col-xs-6 lr-form-item">
+                            <div class="lr-form-item-title">生产工单号</div>
+                            <input id="plan_name" type="text" class="form-control" />
+                        </div>
+                        <div class="col-xs-6 lr-form-item">
+                            <div class="col-xs-1 lr-form-item-title">零件编码</div>
+                            <input id="product_name" type="text" class="form-control" />
+                        </div>
+                        @*<div class="col-xs-3 lr-form-item">
+                            <div class="lr-form-item-title">所属设备</div>
+                            <div id="machine_id"></div>
+                        </div>
+                        <div class="col-xs-3 lr-form-item">
+                            <div class="lr-form-item-title">状态</div>
+                            <div>
+                                <select id="state" style="height:28px">
+                                    <option value="">==请选择==</option>
+                                    <option value="新增">新增</option>
+                                    <option value="开始">开始</option>
+                                    <option value="暂停">暂停</option>
+                                </select>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+                <div class="lr-layout-tool-right">
+                    <div class=" btn-group btn-group-sm">
+                        <a id="lr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                    <div class=" btn-group btn-group-sm" learun-authorize="yes">
+                        <a id="btn_Search" class="btn btn-search btn-sm"><i class="fa fa-search"></i>&nbsp;查询</a>
+                        <style>
+                            .btn-search {
+                                color: #fff;
+                                background-color: #20B2AA;
+                                border-color: #20B2AA;
+                            }
+                            .btn-tool {
+                                color: #000000;
+                                background-color: #F08080;
+                                border-color: #F08080;
+                            }
+                        </style>
+                        @*<a id="lr_add" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                        <a id="lr_edit" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>
+                        <a id="lr_delete" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;删除</a>*@
+                    </div>
+                </div>
+                <div class="lr-form-item" style="padding-left: 0px;top: 10px;margin-top: 35px;margin-left: 15px;">
+                    @*<a class="btn btn-auto btn-sm"><i class="fa fa-cogs"></i>&nbsp;自动</a>*@
+                    @*<a class="btn btn-auto btn-sm"><i class="fa fa-sort"></i>&nbsp;排序</a>
+                    <style>
+                        .btn-auto {
+                            color: #fff;
+                            background-color: #20B2AA;
+                            border-color: #20B2AA;
+                        }
+                    </style>*@
+                    @*<label style="font-size:16px;margin-top: 10px;">请选择需要自动执行工单的设备：</label>*@
+                </div>
+                @*<div class="lr-form-item" id="autoMachine" style="padding-left: 0px;margin-left: 15px;">
+                    
+                </div>*@
+            </div>
+            <div class="lr-layout-grid" style="overflow:auto;">
+                 <div class="lr-layout-body" id="gridtable" @*style="margin-top: 65px;"*@></div> 
+            </div>
+        </div>
+        
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/Plan_manage/Index.js")

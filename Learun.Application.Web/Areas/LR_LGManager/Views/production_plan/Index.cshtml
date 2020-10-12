@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Production_plan";
+    Layout = "~/Views/Shared/_ReportTemplate.cshtml";
+}
+<div class="lr-layout ui-report"  >
+    <div class="lr-layout-center">
+        <div class="lr-layout-wrap lr-layout-wrap-notitle ">
+            <div class="lr-layout-tool" style="height:86px">
+                <div class="lr-layout-tool-left">
+                    <div class="lr-layout-tool-item">
+                        <div id="datesearch"></div>
+                    </div>
+                    <div class="lr-layout-tool-item" id="multiple_condition_query">
+                        <div class="col-xs-3 lr-form-item">
+                            <div class="lr-form-item-title">计划名称</div>
+                            <input id="plan_name" type="text" class="form-control" />
+                        </div>
+                        <div class="col-xs-3 lr-form-item">
+                            <div class="lr-form-item-title">产品名称</div>
+                            <input id="product_name" type="text" class="form-control" />
+                        </div>
+                        <div class="col-xs-3 lr-form-item">
+                            <div class="lr-form-item-title">所属设备</div>
+                            <div id="machine_id"></div>
+                        </div>
+                        <div class="col-xs-3 lr-form-wrap">
+                            <div class="col-xs-10 lr-form-item" data-table="tb_production_plan">
+                                <div class="lr-form-item-title">状态</div>
+                                <div id="state"></div>
+                            </div>
+                        </div>
+                        @*<div class="col-xs-3 lr-form-item">
+                            <div class="lr-form-item-title">状态</div>
+                            <div>
+                                <select id="state" style="width:110px;height:28px">
+                                    <option value="">==请选择==</option>
+                                    <option value="新增">新增</option>
+                                    <option value="开始">开始</option>
+                                    <option value="暂停">暂停</option>
+                                    <option value="完成">完成</option>
+                                    <option value="变更">变更</option>
+                                </select>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+                <div class="lr-layout-tool-right">
+                    <div class=" btn-group btn-group-sm">
+                        <a id="lr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                    <div class=" btn-group btn-group-sm" learun-authorize="yes">
+                        <a id="btn_Search" class="btn btn-search btn-sm"><i class="fa fa-search"></i>&nbsp;查询</a>
+                        <style>
+                            .btn-search {
+                                color: #fff;
+                                background-color: #20B2AA;
+                                border-color: #20B2AA;
+                            }
+                        </style>
+                        <a id="lr_add" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                        <a id="lr_edit" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>
+                        <a id="lr_delete" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+                        <a id="lr_print" class="btn btn-default"><i class="fa fa-print"></i>&nbsp;打印</a>
+                        <a id="lr_outport" class="btn btn-default"><i class="fa fa-sign-out"></i>&nbsp;导出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="lr-layout-grid" style="overflow:auto;">
+                <div class="grid-title">
+                    <div style="overflow: hidden;margin-top: 15px; padding-bottom: 20px; text-align: center; margin-left: auto; margin-right: auto;">
+                        <div id="main" style="float: left; margin-right: 20px; width: 385px; height: 350px;border: 1px solid #ccc;">
+                        </div>
+                        <div id="main1" style="float: left; margin-right: 20px; width: 385px; height: 350px;border: 1px solid #ccc;">
+                        </div>
+                        <div id="main2" style="float: left; margin-right: 20px; width: 385px; height: 350px;border: 1px solid #ccc;">
+                        </div>
+                    </div>
+                    <div class="lr-layout-body" id="gridtable"></div>
+                </div>
+               
+            </div>    
+        </div>
+    </div>
+</div>
+<script src="~/Content/echarts/echarts.js"></script>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/Production_plan/Index.js")

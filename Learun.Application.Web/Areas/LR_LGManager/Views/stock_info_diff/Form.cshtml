@@ -1,0 +1,254 @@
+﻿@{
+    ViewBag.Title = "stock_info";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="lr-form-wrap">
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">展开ID<font face="宋体">*</font></div>
+        <input id="open_id" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">下发时间</div>
+        <input id="start_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',onpicked: function () { $('#start_time').trigger('change'); } })" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">展开时间</div>
+        <input id="open_time" type="text" class="form-control lr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd',onpicked: function () { $('#open_time').trigger('change'); } })" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">平台名称</div>
+        <input id="platform_name" type="text" class="form-control" />
+        @*<div id="platform_name" isvalid="yes"></div>*@
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">设计员</div>
+        <input id="designer" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">平台编码</div>
+        <input id="platform_id" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">单元名称</div>
+        <input id="unit_name" type="text" class="form-control"  />
+        @*<div id="unit_name" isvalid="yes"></div>*@
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">单元编码</div>
+        <input id="unit_id" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">序号</div>
+        <input id="order_number" type="text" class="form-control" isvalid="yes" checkexpession="NumOrNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">类型</div>
+        <input id="type" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">零件编码</div>
+        <input id="element_id" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">名称</div>
+        <input id="element_name" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">材质</div>
+        <input id="element_cz" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">型号规格</div>
+        <input id="element_gg" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">重量</div>
+        <input id="element_zl" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">单套数量</div>
+        <input id="single_num" type="text" class="form-control" isvalid="yes" checkexpession="NumOrNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">单位</div>
+        <input id="element_unit" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">表面处理</div>
+        <input id="skin_stress" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">热处理</div>
+        <input id="hot_stress" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">颜色</div>
+        <input id="element_color" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">供应商</div>
+        <input id="element_supplier" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-12 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">备注</div>
+        <textarea id="note" class="form-control" style="height:100px;"></textarea>
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">零件分类</div>
+        <input id="element_type" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">零件属性</div>
+        <input id="element_nature" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">安全库存</div>
+        <input id="safe_number" type="text" class="form-control" isvalid="yes" checkexpession="NumOrNull" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">库位代码</div>
+        <input id="storehouse_id" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">图纸存单ID</div>
+        <input id="drawing_id" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工艺ID</div>
+        <input id="craft_id" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">材料尺寸</div>
+        <input id="material_size" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">材料重量</div>
+        <input id="material_weight" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序1</div>
+        <input id="procedures1" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序2</div>
+        <input id="procedures2" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序3</div>
+        <input id="procedures3" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序4</div>
+        <input id="procedures4" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序5</div>
+        <input id="procedures5" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序6</div>
+        <input id="procedures6" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序7</div>
+        <input id="procedures7" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序8</div>
+        <input id="procedures8" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序9</div>
+        <input id="procedures9" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">工序10</div>
+        <input id="procedures10" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额1</div>
+        <input id="quota1" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额2</div>
+        <input id="quota2" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额3</div>
+        <input id="quota3" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额4</div>
+        <input id="quota4" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额5</div>
+        <input id="quota5" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额6</div>
+        <input id="quota6" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额7</div>
+        <input id="quota7" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额8</div>
+        <input id="quota8" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额9</div>
+        <input id="quota9" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">定额10</div>
+        <input id="quota10" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费1</div>
+        <input id="out_cost1" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费2</div>
+        <input id="out_cost2" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费3</div>
+        <input id="out_cost3" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费4</div>
+        <input id="out_cost4" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费5</div>
+        <input id="out_cost5" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费6</div>
+        <input id="out_cost6" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费7</div>
+        <input id="out_cost7" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费8</div>
+        <input id="out_cost8" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费9</div>
+        <input id="out_cost9" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协费10</div>
+        <input id="out_cost10" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-6 lr-form-item" data-table="tb_stock_info">
+        <div class="lr-form-item-title">外协外购费</div>
+        <input id="outbuy_cost" type="text" class="form-control" />
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/LR_LGManager/Views/stock_info_diff/Form.js")
+
